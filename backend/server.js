@@ -5,7 +5,11 @@ require("dotenv").config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://blog-app-5e8h.vercel.app",
+  })
+);
 
 connectDB();
 app.use("/api/posts", require("./routes/postRoutes"));

@@ -16,7 +16,10 @@ function AddPost() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:5000/api/posts", formData);
+    await axios.post(
+      "https://blog-app-alpha-umber.vercel.app/api/posts",
+      formData
+    );
     navigate("/");
   };
 
